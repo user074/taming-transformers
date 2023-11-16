@@ -1,3 +1,35 @@
+# Creation of the codebook from images
+
+## Requirements and Installation
+
+First install following packages:
+
+```
+pip install omegaconf>=2.0.0 pytorch-lightning>=1.0.8 einops>=0.3.0
+```
+
+Then install from this repo
+    
+```
+git clone https://github.com/user074/taming-transformers
+cd taming-transformers
+```
+
+We will need to download the model for the pretrained VQGAN. Ensure it is installed in the correct location:
+
+```
+mkdir logs
+mkdir output
+mkdir -p logs/vqgan_imagenet_f16_16384/checkpoints
+mkdir -p logs/vqgan_imagenet_f16_16384/configs
+wget 'https://heibox.uni-heidelberg.de/f/867b05fc8c4841768640/?dl=1' -O 'logs/vqgan_imagenet_f16_16384/checkpoints/last.ckpt' 
+wget 'https://heibox.uni-heidelberg.de/f/274fb24ed38341bfa753/?dl=1' -O 'logs/vqgan_imagenet_f16_16384/configs/model.yaml' 
+
+```
+
+## Usage
+You can refer the the other repo's readme on the Load VQGAN section for more details on the model.
+
 # Taming Transformers for High-Resolution Image Synthesis
 ##### CVPR 2021 (Oral)
 ![teaser](assets/mountain.jpeg)
