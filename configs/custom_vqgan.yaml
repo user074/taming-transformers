@@ -1,9 +1,9 @@
 model:
   base_learning_rate: 4.5e-6
-  target: taming.models.vqgan.VQModel
+  target: taming.models.vqgan.LFQModel
   params:
     embed_dim: 256
-    n_embed: 1024
+    n_embed: 65536
     ddconfig:
       double_z: False
       z_channels: 256
@@ -33,11 +33,11 @@ data:
     train:
       target: taming.data.custom.CustomTrain
       params:
-        training_images_list_file: some/training.txt
+        training_images_list_file: /home/jqi/Github/taming-transformers/customData/train.txt
         size: 256
     validation:
       target: taming.data.custom.CustomTest
       params:
-        test_images_list_file: some/test.txt
+        test_images_list_file: /home/jqi/Github/taming-transformers/customData/test.txt
         size: 256
 
