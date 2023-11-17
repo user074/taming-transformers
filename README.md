@@ -30,6 +30,13 @@ wget 'https://heibox.uni-heidelberg.de/f/274fb24ed38341bfa753/?dl=1' -O 'logs/vq
 ## Usage
 You can refer the the other repo's readme on the Load VQGAN section for more details on the model.
 
+## Run the model
+```
+conda activate taming
+python main.py --base configs/custom_vqgan.yaml -t True --gpus 0,
+```
+
+
 # Taming Transformers for High-Resolution Image Synthesis
 ##### CVPR 2021 (Oral)
 ![teaser](assets/mountain.jpeg)

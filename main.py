@@ -237,6 +237,7 @@ class ImageLogger(Callback):
             grid = torchvision.utils.make_grid(images[k])
             grids[f"{split}/{k}"] = wandb.Image(grid)
         pl_module.logger.experiment.log(grids)
+        wandb.log(grids)
 
     @rank_zero_only
     def _testtube(self, pl_module, images, batch_idx, split):
