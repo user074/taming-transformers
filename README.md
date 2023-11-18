@@ -30,13 +30,25 @@ wget 'https://heibox.uni-heidelberg.de/f/274fb24ed38341bfa753/?dl=1' -O 'logs/vq
 ## Usage
 You can refer the the other repo's readme on the Load VQGAN section for more details on the model.
 
+## Distributed Training
+Need to uncomment the main.py's 
+```
+        # trainer_config["distributed_backend"] = "ddp"
+```
+The rest should be the same
+
 ## Run the model
+This is modified for the single GPU for RTX4090. It needs a higher CUDA version to run. 
 ```
 conda activate taming
 python main.py --base configs/custom_vqgan.yaml -t True --gpus 0,
 ```
 
+## To do:
+wandb log images for better visualization
 
+
+----------------------------------------------------------------------------------------------------------------------------
 # Taming Transformers for High-Resolution Image Synthesis
 ##### CVPR 2021 (Oral)
 ![teaser](assets/mountain.jpeg)

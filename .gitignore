@@ -1,3 +1,4 @@
 logs/
 taming_transformers.egg-info/
 __pycache__/
+nohup.out
