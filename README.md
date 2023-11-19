@@ -29,6 +29,10 @@ wget 'https://heibox.uni-heidelberg.de/f/274fb24ed38341bfa753/?dl=1' -O 'logs/vq
 
 ## Usage
 You can refer the the other repo's readme on the Load VQGAN section for more details on the model.
+## Extra installation
+```
+pip install vector-quantize-pytorch
+```
 
 ## Distributed Training
 Need to uncomment the main.py's 
@@ -41,7 +45,7 @@ The rest should be the same
 This is modified for the single GPU for RTX4090. It needs a higher CUDA version to run. 
 ```
 conda activate taming
-python main.py --base configs/custom_vqgan.yaml -t True --gpus 0,
+python main.py --max_epochs 12 --base configs/custom_vqgan.yaml -t True --gpus 0,
 ```
 
 ## To do:
