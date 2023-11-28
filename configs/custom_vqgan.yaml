@@ -3,7 +3,7 @@ model:
   target: taming.models.vqgan.LFQModel
   params:
     embed_dim: 256
-    n_embed: 65536
+    n_embed: 512
     ddconfig:
       double_z: False
       z_channels: 256
