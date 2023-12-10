@@ -38,7 +38,7 @@ class LFQModel(pl.LightningModule):
                     dim = embed_dim,                   # this is the input feature dimension, defaults to log2(codebook_size) if not defined
                     entropy_loss_weight = 0.1,  # how much weight to place on entropy loss
                     diversity_gamma = 1. ,       # within entropy loss, how much weight to give to diversity of codes, taken from https://arxiv.org/abs/1911.05894
-                    num_codebooks = 2
+                    num_codebooks = 1
         )
 
         self.quant_conv = torch.nn.Conv2d(ddconfig["z_channels"], embed_dim, 1)

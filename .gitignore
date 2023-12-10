@@ -2,3 +2,5 @@ logs/
 taming_transformers.egg-info/
 __pycache__/
 nohup.out
+customData/train.txt
+customData/test.txt
